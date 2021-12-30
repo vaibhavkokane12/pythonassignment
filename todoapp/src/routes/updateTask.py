@@ -23,8 +23,8 @@ def update_task():
         else:
             msg='please send json request'
             status_code=400
-    except:
-        print('exception in update_task')
+    except Exception as err:
+        print('exception in update_task',err)
         msg='cannot update task'
         status_code=400
     finally:

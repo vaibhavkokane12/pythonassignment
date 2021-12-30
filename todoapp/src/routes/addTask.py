@@ -23,8 +23,8 @@ def add_task():
         else:
             msg='please send json request'
             status=400
-    except:
-        print('exception in add_task function')
+    except Exception as err:
+        print('exception in add_task function:',err)
         msg='cannot add task'
         status=400
     finally:

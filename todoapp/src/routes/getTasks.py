@@ -20,7 +20,7 @@ def get_tasks():
                 'task_details':row[2],
                 'created_at':row[3]
             })
-    except:
-        print('exception in get_tasks')
+    except Exception as err:
+        print('exception in get_tasks:',err)
     finally:
         return jsonify(tasks)

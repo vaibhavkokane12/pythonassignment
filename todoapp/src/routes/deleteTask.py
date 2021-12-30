@@ -22,8 +22,8 @@ def delete_task():
         else:
             msg='please send json request'
             status_code=400
-    except:
-        print('exception in delete_task')
+    except Exception as err:
+        print('exception in delete_task:',err)
         msg='cannot delete task'
         status_code=400
     finally:

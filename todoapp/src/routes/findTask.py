@@ -29,8 +29,8 @@ def get_task(id):
         else:
             msg='task not found'
             status_code=404
-    except:
-        print('exception in get_task')
+    except Exception as err:
+        print('exception in get_task',err)
         msg='task not found'
         status_code=404
     finally:       
